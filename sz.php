@@ -14,6 +14,7 @@ if(version_compare(PHP_VERSION,'5.5.0','<'))  die('PHP版本需要>=5.5，请升
 @ini_set('max_execution_time', '0');
 //内存限制 取消内存限制
 @ini_set("memory_limit",'-1');
+@ini_set("display_errors",'On');
 // 定义应用目录
 define('ROOT_PATH', __DIR__ . '/');
 define('APP_PATH', __DIR__ . '/application/');

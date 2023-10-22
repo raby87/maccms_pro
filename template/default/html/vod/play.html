@@ -104,7 +104,8 @@
 			            </div>
 						
 			            {/if}
-				        {$player_data}{$player_js}
+						<!-- 播放器  -->
+				        {$player_data}ddd{$player_js}ccc
 				    {/if}							
 					</div>
 					
@@ -255,10 +256,10 @@
 						 <ul class="content_playlist clearfix">
 						    {maccms:foreach name="obj.vod_play_list" id="vo" by="num"}
 							{maccms:foreach name="vo.urls" id="vo2"}							
-							<li {if condition="$param.sid eq $vo.sid && $param.nid eq $vo2.nid"}class="active"{/if}><a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}">{$vo2.name}</a></li>
+							<li {if condition="$param.sid eq $vo.sid && $param.nid eq $vo2.nid"}class="active"{/if}><a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}">{$vo2.name}111222</a></li>
 							{/maccms:foreach}
 							{empty name="vo.urls"}
-							<li><a href="javascript:void(0)" data-lang="string_play_zwxh">{:lang_web('string_play_zwxh')}</a></li>
+							<li><a href="javascript:void(0)" data-lang="string_play_zwxh">{:lang_web('string_play_zwxh')}333333</a></li>
 							{/empty}
 							{/maccms:foreach}
 						 </ul> 
@@ -276,7 +277,7 @@
 					  <div class="scroller">
 					  <ul class="title_nav">
 						{maccms:foreach name="obj.vod_play_list" id="vo" by="sort"}
-						<li class="tab-play {if$vo.player_info.from==$obj['vod_play_list'][$param['sid']]['player_info']['from']}tplconfig-01{/if}" title="{$vo.player_info.show}"><a {if$vo.player_info.from==$obj['vod_play_list'][$param['sid']]['player_info']['from']}href="javascript:;" class="playnow_info"{else}href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$param.nid])}"{/if}><i class="iconfont">&#xe62f;</i>&nbsp;{$vo.player_info.show}</a></li>
+						<li class="tab-play {if$vo.player_info.from==$obj['vod_play_list'][$param['sid']]['player_info']['from']}tplconfig-01{/if}" title="{$vo.player_info.show}"><a {if$vo.player_info.from==$obj['vod_play_list'][$param['sid']]['player_info']['from']}href="javascript:;" class="playnow_info"{else}href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$param.nid])}"{/if}><i class="iconfont">&#xe62f;</i>&nbsp;{$vo.player_info.show}4444</a></li>
 						{/maccms:foreach}
 					  </ul>
 					  </div>
@@ -294,7 +295,7 @@
 						  <div class="scroller">
 							 <ul class="content_playlist clearfix">
 								{maccms:foreach name="vo.urls" id="vo2" key="key2"}								
-								<li {if condition="$param.sid eq $vo.sid && $param.nid eq $vo2.nid"}class="active tplconfig-02"{/if}><a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}">{$vo2.name}</a></li>
+								<li {if condition="$param.sid eq $vo.sid && $param.nid eq $vo2.nid"}class="active tplconfig-02"{/if}><a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}">{$vo2.name}5555</a></li>
 								{/maccms:foreach}
 							 </ul> 
 						  </div>
@@ -304,7 +305,7 @@
 					  <div class="playlist_full" style="display:none;">
 						  <ul class="content_playlist clearfix">
 							 {maccms:foreach name="vo.urls" id="vo2" key="key2"}								
-							 <li {if condition="$param.sid eq $vo.sid && $param.nid eq $vo2.nid"}class="active tplconfig-02"{/if}><a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}">{$vo2.name}</a></li>
+							 <li {if condition="$param.sid eq $vo.sid && $param.nid eq $vo2.nid"}class="active tplconfig-02"{/if}><a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}">{$vo2.name}6666</a></li>
 							 {/maccms:foreach}
 						  </ul> 
 					  </div>

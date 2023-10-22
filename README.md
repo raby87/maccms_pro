@@ -16,6 +16,23 @@ Program ease of use and function has been actively adopted by the vast number of
 Program using the thinkphp 5.x kernel for development, extended the template processing engine, the background program and html template simple separation, so that designers and programmers to maximize their advantages without interference, greatly speed up the project orderly and fast completion.  
 Even if you are in first contact, you will master how to use it in the shortest possible time. Back-office management module, at a glance, easy to operate, will never dazzle you.  
 
+## 目录结构
+│─application //应用目录
+  │  │─admin //后台模块
+  │  │─api //api模块
+  │  │─common //公共模块
+  │  │─extra //配置文件
+  │  │─index //前台模块
+  │  │─install //安装模块
+  │─extend  //扩展目录
+  │─runtime //缓存目录
+  │─static //静态文件目录
+  │─template //前台模板目录
+  │─thinkphp //tp目录
+  │─upload //附件目录
+  │─vendor //第三发库目录
+  └─index.php //入口文件
+
 ## 免责声明
 本程序仅供内部学习和交流使用，请在遵守当地法律的前提下使用本站程序，对用户在使用过程中的自行维护的信息内容本站不负任何责任！
 

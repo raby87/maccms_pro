@@ -8,6 +8,7 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
+//todo 前后端公共入口
 
 define('THINK_VERSION', '5.0.24');
 define('THINK_START_TIME', microtime(true));
@@ -34,6 +35,20 @@ defined('ENV_PREFIX') or define('ENV_PREFIX', 'PHP_'); // 环境变量的配置�
 define('IS_CLI', PHP_SAPI == 'cli' ? true : false);
 define('IS_WIN', strpos(PHP_OS, 'WIN') !== false);
 
+if (is_file(ROOT_PATH.'.env')) {
+    $env = parse_ini_file(ROOT_PATH.'.env', true);    //解析env文件,name = PHP_KEY
+    foreach ($env as $key => $val) {
+        $name = strtoupper($key);
+        if (is_array($val)) {
+            foreach ($val as $k => $v) {    //如果是二维数组 item = PHP_KEY_KEY
+                $item = $name . '_' . strtoupper($k);
+                putenv("$item=$v");
+            }
+        } else {
+            putenv("$name=$val");
+        }
+    }
+}
 // 载入Loader类
 require CORE_PATH . 'Loader.php';
 

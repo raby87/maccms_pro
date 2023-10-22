@@ -4,9 +4,9 @@ return array (
   array (
     'type' => 'mysql',
     'path' => '',
-    'server' => '127.0.0.1',
-    'port' => '3306',
-    'name' => 'maccms10',
+    'server' => '192.168.0.17',
+    'port' => '3308',
+    'name' => 'htc',
     'user' => 'root',
     'pass' => 'root',
     'tablepre' => 'mac_',
@@ -227,7 +227,7 @@ return array (
   'interface' => 
   array (
     'status' => 0,
-    'pass' => 'VWDTDIOW4QQDEZ5S',
+    'pass' => '07EUJNCAUWJIKQIQ',
     'vodtype' => '动作片=动作',
     'arttype' => '头条=头条',
     'actortype' => '',
